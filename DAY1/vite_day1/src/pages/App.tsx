@@ -6,6 +6,7 @@ import CustomMenu from '../components/CustomMenu';
 import { Button } from '@mui/material';
 
 function App() {
+  // Please type your useStates (safer for manipulating)
   const [count, setCount] = useState<number>(0);
 
   return (

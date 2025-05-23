@@ -2,7 +2,7 @@ import { createPortal } from "react-dom";
 import "./nameModal.css";
 import { useEffect, useRef, useState } from "react";
 
-interface NameModalProps {
+interface NameModalProps { // Try to use interfaces so your Component will show what props are mandatory
   isOpen: boolean;
   onClose: () => void;
   name: string;
@@ -10,16 +10,18 @@ interface NameModalProps {
 }
 
 function NameModal({isOpen, onClose, name, saveName}: NameModalProps) {
+    // We try to send to the modal all the necessary functions so it can receive and apply any behavior
     const portalTarget = document.getElementById("name_modal");
+    // Make sure portal target exists in index.html and cover cases if it does not exist
     if (!isOpen || !portalTarget) return null;
 
     const [inputName, setInputName] = useState<string>(name || "");
-    const nameInputRef = useRef<HTMLInputElement>(null);
+    const nameInputRef = useRef<HTMLInputElement>(null); // Use it to handle associated ref
 
     useEffect(() => {
-        nameInputRef.current?.focus()
+        nameInputRef.current?.focus() // You can use DOM Node methods
         const data = {
-            text: nameInputRef.current?.value,
+            text: nameInputRef.current?.value, // Showing what data you can get from a DOM Node
             height: nameInputRef.current?.getBoundingClientRect()?.height,
             width: nameInputRef.current?.getBoundingClientRect()?.width
         }

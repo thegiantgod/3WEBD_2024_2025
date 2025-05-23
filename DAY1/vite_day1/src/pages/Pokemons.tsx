@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 function pokemons() {
     const [id, setId] = useState<number>(0);
+    // useQuery is your greatest ally to fetch data, use its possibilities
     const {data, refetch} = useQuery({queryKey: ["pokemon_id"], queryFn: () => getPokemonById(id)});
 
     const onIdSelectorClick = () => {

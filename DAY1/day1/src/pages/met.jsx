@@ -4,8 +4,9 @@ import { useEffect } from "react";
 
 function Met() {
 
-
-    const {data, isError, isLoading, isFetching, refetch} = useQuery({queryKey: ["met"], queryFn: getAllObjectIDs});
+    // useQuery is your greatest ally to fetch data, use its possibilities
+    // especially things like isFetching, so you can switch display when reloading data
+    const {data, isFetching, refetch} = useQuery({queryKey: ["met"], queryFn: getAllObjectIDs});
 
     useEffect(() => {
         console.log(data);

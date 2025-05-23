@@ -1,4 +1,5 @@
 
+// In TS, type as much as you can, you will get benefit of JS and benefits of typing
 
 function getAscii(word: String): Array<number> {
     let asciiNumbers: Array<number> = [];
