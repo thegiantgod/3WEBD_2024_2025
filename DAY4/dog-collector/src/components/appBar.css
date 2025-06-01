@@ -1,0 +1,23 @@
+.app_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed 0 0;
+}
+
+.menu_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.menu_buttons button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.menu_buttons button:focus {
+    border-color: transparent;
+}

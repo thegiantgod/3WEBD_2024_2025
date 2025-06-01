@@ -1,0 +1,19 @@
+.pagination_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination_buttons button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.pagination_buttons button:disabled {
+  cursor: not-allowed;
+}
