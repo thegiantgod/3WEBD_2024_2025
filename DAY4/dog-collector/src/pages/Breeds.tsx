@@ -5,11 +5,13 @@ import "./Breeds.css";
 import BreedCard from "../components/BreedCard";
 import { useState } from "react";
 import Pagination from "../components/Pagination";
+import { useTranslation } from "react-i18next";
 
 function Breeds() {
 
     const {data} = useQuery({queryKey: ["dog_breeds"], queryFn: getDogBreeds});
     const [currentPage, setCurrentPage] = useState<number>(1);
+    const { t } = useTranslation();
     const breedsPerPage = 15;
 
     const breeds = data ? Object.keys(data.message) : [];
@@ -22,6 +24,7 @@ function Breeds() {
     return (
         <>
             <AppBar/>
+            <h3>{t("breeds_title")}</h3>
             <div className="grid_container">
                 {currentBreeds.map((breed) => (
                     <BreedCard key={breed} breed={breed} />

@@ -1,0 +1,49 @@
+.breed_modal {
+    background-color: rgb(26, 26, 26);
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(82, 82, 82, 0.5); /* semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.save_button {
+    background-color: blue;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.close_button {
+    background-color: crimson;
+    color: white;
+    align-self: flex-end;
+    margin-bottom: 30px;
+}
+
+.modal_images {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 1.3rem;
+}
+
+.breed_image {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 200px;
+}

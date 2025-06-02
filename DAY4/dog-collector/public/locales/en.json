@@ -1,5 +1,9 @@
 {
     "welcome": "Welcome to the first and best app to watch dog pics !",
     "home": "Home",
-    "breeds": "Breeds"
+    "breeds": "Breeds",
+    "breeds_title": "Here are all the available dog breeds",
+    "close": "Close",
+    "modal_title": "These are three pictures of  this dog breed : {{breed}}"
+
 }

@@ -1,5 +1,9 @@
 {
     "welcome": "Bienvenue dans la première et meilleure app de photos de chiens !",
     "home": "Acueuil",
-    "breeds": "Races"
+    "breeds": "Races",
+    "breeds_title": "Voici toutes les races de chiens disponibles",
+    "close": "Fermer",
+    "modal_title": "Voici trois images de cette race de chien : {{breed}}"
+
 }
